@@ -1,7 +1,9 @@
 import type { StorybookConfig } from "@storybook/vue3-vite";
+import presetUno from "@unocss/preset-uno";
 import path from "node:path";
 import UnoCSS from "unocss/vite";
 import { mergeConfig } from "vite";
+import presetBlechUi from "~presets/index";
 
 const config: StorybookConfig = {
     stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
@@ -19,7 +21,11 @@ const config: StorybookConfig = {
     },
     viteFinal(config) {
         return mergeConfig(config, {
-            plugins: [UnoCSS()],
+            plugins: [
+                UnoCSS({
+                    presets: [presetUno(), presetBlechUi()],
+                }),
+            ],
             resolve: {
                 alias: {
                     "~components": path.join(__dirname, "../src/components"),

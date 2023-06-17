@@ -2,7 +2,7 @@ import { PresetPart } from ".";
 
 const preset: PresetPart = {
     shortcuts: {
-        "btn": ""
+        "btn": "p-2"
     },
 };
 
