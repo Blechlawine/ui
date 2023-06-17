@@ -23,8 +23,16 @@
         "paths": {
             "~components/*": ["src/components/*"],
             "~presets/*": ["src/presets/*"],
+            "~presets": ["src/presets"]
         }
     },
-    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "uno.config.ts",
+        ".storybook/*.ts"
+    ],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
