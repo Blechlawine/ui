@@ -22,17 +22,10 @@
         "noFallthroughCasesInSwitch": true,
         "paths": {
             "~components/*": ["src/components/*"],
-            "~presets/*": ["src/presets/*"],
-            "~presets": ["src/presets"]
+            "~library/*": ["src/components/library/*"],
+            "~presets/*": ["src/presets/*"]
         }
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.d.ts",
-        "src/**/*.tsx",
-        "src/**/*.vue",
-        "uno.config.ts",
-        ".storybook/*.ts"
-    ],
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "uno.config.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

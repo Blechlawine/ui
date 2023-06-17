@@ -1,8 +1,9 @@
-import { PresetPart } from ".";
+import { Preset } from "unocss";
 
-const preset: PresetPart = {
+const preset: Preset = {
+    name: "blech-ui/button",
     shortcuts: {
-        "btn": "p-2"
+        btn: "px-2 py-1 bg-green",
     },
 };
 
