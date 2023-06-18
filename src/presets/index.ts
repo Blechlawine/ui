@@ -14,8 +14,11 @@ export default function presetBlechUi(options?: Options): Preset {
         dark: {
             colors: {
                 "base-0": "#18181b",
+                "base-0-highlight": "#27272a",
                 "base-1": "#27272a",
+                "base-1-highlight": "#3f3f46",
                 "base-2": "#3f3f46",
+                "base-2-highlight": "#4b4b5e",
                 "base-content": "#FFFFFF",
 
                 red: "#f87171",
@@ -35,6 +38,24 @@ export default function presetBlechUi(options?: Options): Preset {
                 fuchsia: "#e879f9",
                 pink: "#f472b6",
                 rose: "#fb7185",
+
+                "red-highlight": "#ef4444",
+                "orange-highlight": "#f97316",
+                "amber-highlight": "#f59e0b",
+                "yellow-highlight": "#eab308",
+                "lime-highlight": "#84cc16",
+                "green-highlight": "#22c55e",
+                "emerald-highlight": "#10b981",
+                "teal-highlight": "#14b8a6",
+                "cyan-highlight": "#06b6d4",
+                "sky-highlight": "#0ea5e9",
+                "blue-highlight": "#3b82f6",
+                "indigo-highlight": "#6366f1",
+                "violet-highlight": "#8b5cf6",
+                "purple-highlight": "#a855f7",
+                "fuchsia-highlight": "#d946ef",
+                "pink-highlight": "#ec4899",
+                "rose-highlight": "#f43f5e",
 
                 "red-content": "#18181b",
                 "orange-content": "#18181b",
@@ -58,8 +79,11 @@ export default function presetBlechUi(options?: Options): Preset {
         light: {
             colors: {
                 "base-0": "#FFFFFF",
+                "base-0-highlight": "#fafafa",
                 "base-1": "#fafafa",
+                "base-1-highlight": "#e4e4e7",
                 "base-2": "#e4e4e7",
+                "base-2-highlight": "#d4d4d8",
                 "base-content": "#18181b",
 
                 red: "#ef4444",
@@ -79,6 +103,24 @@ export default function presetBlechUi(options?: Options): Preset {
                 fuchsia: "#d946ef",
                 pink: "#ec4899",
                 rose: "#f43f5e",
+
+                "red-highlight": "#dc2626",
+                "orange-highlight": "#ea580c",
+                "amber-highlight": "#d97706",
+                "yellow-highlight": "#ca8a04",
+                "lime-highlight": "#65a30d",
+                "green-highlight": "#16a34a",
+                "emerald-highlight": "#059669",
+                "teal-highlight": "#0d9488",
+                "cyan-highlight": "#0891b2",
+                "sky-highlight": "#0284c7",
+                "blue-highlight": "#2563eb",
+                "indigo-highlight": "#4f46e5",
+                "violet-highlight": "#7c3aed",
+                "purple-highlight": "#9333ea",
+                "fuchsia-highlight": "#c026d3",
+                "pink-highlight": "#db2777",
+                "rose-highlight": "#e11d48",
 
                 "red-content": "#FFFFFF",
                 "orange-content": "#FFFFFF",
@@ -109,6 +151,9 @@ export default function presetBlechUi(options?: Options): Preset {
                 "primary-content": `rgb(var(--un-preset-theme-colors-${
                     options?.primary ?? "green"
                 }-content))`,
+                "primary-highlight": `rgb(var(--un-preset-theme-colors-${
+                    options?.primary ?? "green"
+                }-highlight))`,
             },
         },
         shortcuts: {
