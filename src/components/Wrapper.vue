@@ -1,6 +1,10 @@
 <template>
     <div class="grid border-solid border-0.5 border-base-2 rounded">
-        <label>{{ props.name }}</label>
+        <div class="flex">
+            <label class="bg-base-1 border-r-0.5 border-solid border-base-2 px-3 p-2">
+                {{ props.name }}
+            </label>
+        </div>
         <div class="p-4 border-y-0.5 border-solid border-base-2">
             <slot name="component" />
         </div>
