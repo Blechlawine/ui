@@ -11,7 +11,7 @@ function buttonPreset(options?: Options): Preset {
                 "btn bg-primary text-primary-content hover:bg-primary-highlight border-transparent",
             "btn-ghost":
                 "btn border-transparent bg-transparent text-base-content hover:bg-base-0-highlight",
-            "btn-link": "btn bg-transparent text-base-content",
+            "btn-link": "btn bg-transparent text-base-content border-transparent hover:underline",
         },
     };
 }
