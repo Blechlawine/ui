@@ -5,10 +5,12 @@
 </template>
 <script setup lang="ts">
 const { variant = "base" } = defineProps<{
-    variant: "base" | "ghost" | "neutral" | "primary";
+    variant?: "base" | "ghost" | "neutral" | "primary";
 }>();
 
-const model = defineModel<string | number | boolean>();
+const model = defineModel<string | number | boolean>({
+    required: true,
+});
 
 const classes = computed(() => ({
     select: variant === "base",
