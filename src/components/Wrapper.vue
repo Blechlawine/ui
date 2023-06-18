@@ -1,9 +1,12 @@
 <template>
     <div class="grid border-solid border-0.5 border-base-2 rounded">
         <div class="flex">
-            <!-- <label class="bg-base-1 border-r-0.5 border-solid border-base-2 px-3 p-2">
+            <label
+                v-if="props.name"
+                class="bg-base-1 border-r-0.5 border-solid border-base-2 px-3 p-2"
+            >
                 {{ props.name }}
-            </label> -->
+            </label>
             <div v-for="[key, value] in editablePropEntries" class="px-3 p-2 bg-base-1">
                 {{ key }}
                 <Select variant="ghost" v-if="Array.isArray(value)" v-model="componentProps[key]">
@@ -22,7 +25,7 @@
 
 <script setup lang="ts">
 const props = defineProps<{
-    name: string;
+    name?: string;
     code: string;
     editableProps?: Record<string, string | number | boolean | Array<string>>;
 }>();
