@@ -4,9 +4,12 @@ import defu from "defu";
 import type { Preset } from "unocss";
 import presetTheme from "unocss-preset-theme";
 
-export default function presetBlechUi(options?: {
-    theme: Record<string, Theme>;
-}): Preset {
+export type Options = {
+    theme?: Record<string, Theme>;
+    primary?: string;
+};
+
+export default function presetBlechUi(options?: Options): Preset {
     const theme = defu(options?.theme ?? {}, {
         dark: {
             colors: {
@@ -100,10 +103,16 @@ export default function presetBlechUi(options?: {
 
     return {
         name: "blech-ui",
-        rules: [],
-        variants: [],
+        theme: {
+            colors: {
+                primary: `rgb(var(--un-preset-theme-colors-${options?.primary ?? "green"}))`,
+                "primary-content": `rgb(var(--un-preset-theme-colors-${
+                    options?.primary ?? "green"
+                }-content))`,
+            },
+        },
         shortcuts: {
-            ...buttonPreset.shortcuts,
+            ...buttonPreset(options).shortcuts,
         },
         safelist: Object.keys(theme),
         presets: [
