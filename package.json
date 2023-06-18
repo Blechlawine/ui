@@ -17,8 +17,8 @@
         "vue-router": "^4.2.2"
     },
     "devDependencies": {
+        "@iconify-json/tabler": "^1.1.79",
         "@types/node": "18",
-        "@unocss/preset-uno": "^0.53.1",
         "@vitejs/plugin-vue": "^4.1.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",

@@ -18,12 +18,12 @@ dependencies:
     version: 4.2.2(vue@3.3.4)
 
 devDependencies:
+  '@iconify-json/tabler':
+    specifier: ^1.1.79
+    version: 1.1.79
   '@types/node':
     specifier: '18'
     version: 18.16.18
-  '@unocss/preset-uno':
-    specifier: ^0.53.1
-    version: 0.53.1
   '@vitejs/plugin-vue':
     specifier: ^4.1.0
     version: 4.2.3(vite@4.3.9)(vue@3.3.4)
@@ -302,6 +302,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@iconify-json/tabler@1.1.79:
+    resolution: {integrity: sha512-O3RtNqP5ZaP8abkLR/JJuqPY2JjsuV1ttK3xttbcCE9Uz11Pu1WpmbGJ8jv75DoAGYoZ784VUgL8oiJcINLblw==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
