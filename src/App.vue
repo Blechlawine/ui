@@ -3,9 +3,7 @@
         <nav class="">
             <input type="checkbox" v-model="darkMode" />
         </nav>
-        <Wrapper name="Button" :editable-props="{}" code="<Button>Button</Button>" #component>
-            <Button>Button</Button>
-        </Wrapper>
+        <router-view />
     </div>
 </template>
 

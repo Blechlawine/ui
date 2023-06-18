@@ -24,7 +24,8 @@
             "~components/*": ["src/components/*"],
             "~library/*": ["src/components/library/*"],
             "~presets/*": ["src/presets/*"]
-        }
+        },
+        "types": ["vite/client"]
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "uno.config.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
