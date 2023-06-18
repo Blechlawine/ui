@@ -1,5 +1,5 @@
 <template>
-    <component :is="tag" :class="classes">
+    <component :is="tag" :class="classes" @click="emit('click', $event)">
         <slot />
     </component>
 </template>
@@ -12,6 +12,10 @@ const {
     to?: string;
     is?: string;
     variant?: "base" | "ghost" | "neutral" | "primary";
+}>();
+
+const emit = defineEmits<{
+    (e: "click", event: MouseEvent): void;
 }>();
 
 const tag = computed(() => (is ?? to ? "router-link" : "button"));
