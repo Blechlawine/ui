@@ -1,5 +1,5 @@
 <template>
-    <component :is="tag" :class="classes" @click="emit('click', $event)">
+    <component :is="tag" :class="classes" @click="emit('click', $event)" :to="to">
         <slot />
     </component>
 </template>
@@ -24,6 +24,7 @@ const classes = computed(() => ({
     "btn-primary": variant === "primary",
     "btn-ghost": variant === "ghost",
     "btn-neutral": variant === "neutral",
+    "btn-link": to !== undefined,
     btn: variant === "base",
 }));
 </script>
