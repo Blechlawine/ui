@@ -14,7 +14,12 @@ export default defineConfig({
             dts: path.resolve(__dirname, "src/generated/router.d.ts"),
             extensions: [".vue", ".page.vue"],
         }),
-        Vue(),
+        Vue({
+            script: {
+                propsDestructure: true,
+                defineModel: true,
+            },
+        }),
         AutoImport({
             imports: ["vue", "@vueuse/core", VueRouterAutoImports],
             dts: path.resolve(__dirname, "src/generated/auto-imports.d.ts"),
