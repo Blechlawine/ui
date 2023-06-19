@@ -41,6 +41,7 @@ declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/elements/button': RouteRecordInfo<'/elements/button', '/elements/button', Record<never, never>, Record<never, never>>,
+    '/elements/input': RouteRecordInfo<'/elements/input', '/elements/input', Record<never, never>, Record<never, never>>,
     '/elements/select': RouteRecordInfo<'/elements/select', '/elements/select', Record<never, never>, Record<never, never>>,
   }
 }

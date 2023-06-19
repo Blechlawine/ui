@@ -1,9 +1,11 @@
 import buttonPreset from "./button";
+import formControlPreset from "./formControl";
+import inputPreset from "./input";
 import selectPreset from "./select";
-import { Theme } from "@unocss/preset-uno";
 import defu from "defu";
 import type { Preset } from "unocss";
 import presetTheme from "unocss-preset-theme";
+import { Theme } from "unocss/preset-uno";
 
 export type Options = {
     theme?: Record<string, Theme>;
@@ -160,6 +162,8 @@ export default function presetBlechUi(options?: Options): Preset {
         shortcuts: {
             ...buttonPreset(options).shortcuts,
             ...selectPreset(options).shortcuts,
+            ...formControlPreset(options).shortcuts,
+            ...inputPreset(options).shortcuts,
         },
         safelist: Object.keys(theme),
         presets: [

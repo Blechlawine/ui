@@ -8,10 +8,24 @@
                 {{ props.name }}
             </label>
             <div v-for="[key, value] in editablePropEntries" class="px-3 p-2 bg-base-1">
-                {{ key }}
-                <Select variant="ghost" v-if="Array.isArray(value)" v-model="componentProps[key]">
-                    <option v-for="v in value" :value="v">{{ v }}</option>
-                </Select>
+                <FormControl :label="key">
+                    <Select
+                        variant="ghost"
+                        v-if="Array.isArray(value)"
+                        v-model="componentProps[key]"
+                    >
+                        <option v-for="v in value" :value="v">{{ v }}</option>
+                    </Select>
+                    <Input
+                        v-if="typeof value === 'string'"
+                        v-model="<string | number>componentProps[key]"
+                    />
+                    <input
+                        v-if="typeof value === 'boolean'"
+                        type="checkbox"
+                        v-model="componentProps[key]"
+                    />
+                </FormControl>
             </div>
         </div>
         <div class="p-4 border-y-0.5 border-solid border-base-2">
